@@ -1,0 +1,60 @@
+<div class="meal-entry-container">
+    <mat-card class="meal-entry-card" style="max-width: 600px; padding: 20px;">
+        <div mat-card-header style="display: flex; justify-content: center; width: 100%;">
+            <div mat-card-title class="fw-bold">Meal Entry</div>
+        </div>
+
+        <div mat-card-content>
+            <form [formGroup]="mealForm">
+                <div class="form-field">
+                    <mat-label>Meal Date:</mat-label>
+                    <mat-form-field appearance="outline">
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="mealDate">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-field">
+                    <mat-label>Breakfast:</mat-label>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="number" formControlName="breakfast" min="0" max="100">
+                        <mat-hint>Value between 0 and 100</mat-hint>
+                        <mat-error
+                            *ngIf="mealForm.controls['breakfast'].hasError('min') || mealForm.controls['breakfast'].hasError('max')">r('max')">
+                            Please enter a value between 0 and 100
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-field">
+                    <mat-label>Lunch:</mat-label>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="number" formControlName="lunch" min="0" max="100">
+                        <mat-hint>Value between 0 and 100</mat-hint>
+                        <mat-error
+                            *ngIf="mealForm.controls['lunch'].hasError('min') || mealForm.controls['lunch'].hasError('max')">
+                            Please enter a value between 0 and 100
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-field">
+                    <mat-label>Dinner:</mat-label>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="number" formControlName="dinner" min="0" max="100">
+                        <mat-hint>Value between 0 and 100</mat-hint>
+                        <mat-error
+                            *ngIf="mealForm.controls['dinner'].hasError('min') || mealForm.controls['dinner'].hasError('max')">
+                            Please enter a value between 0 and 100
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </form>
+        </div>
+
+        <div mat-card-actions style="display: flex; justify-content: center; width: 100%;">
+            <button mat-raised-button color="primary" (click)="onSubmit()">Submit Meal Entry</button>
+        </div>
+    </mat-card>
+</div>

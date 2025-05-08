@@ -32,6 +32,11 @@ import { LayoutComp } from './layout/LayoutComp';
 import { MenuItemComp } from './layout/menu-item/MenuItemComp';
 import { PageHeaderComp } from './layout/PageHeaderComp';
 import { SalesComp } from './SalesComp';
+import { MemberListComp } from './user-list/MemberListComp';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { DatePipe, NgIf } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,8 @@ import { SalesComp } from './SalesComp';
     MenuItemComp,
     PageHeaderComp,
     HomeComp,
-    SalesComp
+    SalesComp,
+    MemberListComp,
   ],
   imports: [
     ToastrModule.forRoot({
@@ -70,7 +76,13 @@ import { SalesComp } from './SalesComp';
     MatListModule,
     MatProgressSpinnerModule,
     MatExpansionModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    NgIf,
+    DatePipe,
   ],
   providers: [
     {

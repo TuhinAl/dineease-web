@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   template: `
     <app-page-header icon="home">
-      <h2>Your Dine Name</h2>
+      <h2>Your Name</h2>
 
       <button
         routerLink="/sales"
@@ -56,6 +56,9 @@ import { Component } from '@angular/core';
         </div>
       </div>
     </div>
+
+    <MemberListComp></MemberListComp>
+
   `,
   styles: [`
   .example-card {
@@ -95,4 +98,4 @@ import { Component } from '@angular/core';
     }
   `]
 })
-export class HomeComp {}
+export class HomeComp { }

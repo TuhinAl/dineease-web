@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { DatePipe, NgIf } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,8 +14,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IonicModule } from '@ionic/angular';
@@ -31,12 +35,9 @@ import { HeaderComp } from './layout/HeaderComp';
 import { LayoutComp } from './layout/LayoutComp';
 import { MenuItemComp } from './layout/menu-item/MenuItemComp';
 import { PageHeaderComp } from './layout/PageHeaderComp';
+import { MealEntryModule } from './meal-entry/meal-entry.module';
 import { SalesComp } from './SalesComp';
 import { MemberListComp } from './user-list/MemberListComp';
-import { MatTableModule } from '@angular/material/table';
-import { MatSortModule } from '@angular/material/sort';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { DatePipe, NgIf } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { DatePipe, NgIf } from '@angular/common';
     PageHeaderComp,
     HomeComp,
     SalesComp,
-    MemberListComp,
+    MemberListComp
   ],
   imports: [
     ToastrModule.forRoot({
@@ -83,6 +84,7 @@ import { DatePipe, NgIf } from '@angular/common';
     MatPaginatorModule,
     NgIf,
     DatePipe,
+    MealEntryModule
   ],
   providers: [
     {

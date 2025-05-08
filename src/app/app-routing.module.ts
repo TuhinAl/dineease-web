@@ -5,6 +5,7 @@ import {DashboardComp} from "./dashboard/DashboardComp";
 import { LayoutComp } from './layout/LayoutComp';
 import { HomeComp } from './HomeComp';
 import { SalesComp } from './SalesComp';
+import { MealEntryComp } from './meal-entry/MealEntryComp';
 
 
 const routes: Routes = [ 
@@ -24,6 +25,10 @@ const routes: Routes = [
       {
         path: 'sales',
         component: SalesComp
+      },
+      {
+        path: 'meal-entry',
+        component: MealEntryComp
       }
     ]
   }

@@ -36,22 +36,16 @@ export class LayoutComp {
       color: '#ff7f0e',
     },
     {
-      title: 'Statistics',
+      title: 'Function',
       icon: 'bar_chart',
       color: '#ff7f0e',
       subMenu: [
         {
-          title: 'Sales',
+          title: 'Entry',
           icon: 'money',
-          link: '/sales',
+          link: '/meal-entry',
           color: '#ff7f0e',
-        },
-        {
-          title: 'Customers',
-          icon: 'people',
-          color: '#ff7f0e',
-          link: '/customers',
-        },
+        }
       ],
     },
   ];

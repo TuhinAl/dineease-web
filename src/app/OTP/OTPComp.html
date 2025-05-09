@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="title">OTP Verification</div>
+        <form>
+            <div class="otp-header">
+                <p>Enter the 6-digit code sent to your phone</p>
+                <div class="phone-number">+88 01XXXXXXXX</div>
+            </div>
+
+            <div class="otp-container">
+                <div class="otp-input-group">
+                    <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                    <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                    <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                    <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                    <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                    <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                </div>
+            </div>
+
+            <div class="timer">
+                <span>Resend OTP in </span>
+                <span class="countdown">01:30</span>
+            </div>
+
+            <div class="row button">
+                <button type="submit" mat-raised-button>Verify OTP</button>
+            </div>
+
+            <!-- <div class="resend-link">
+                Didn't receive the code? <a href="#">Resend OTP</a>
+            </div> -->
+        </form>
+    </div>
+</div>

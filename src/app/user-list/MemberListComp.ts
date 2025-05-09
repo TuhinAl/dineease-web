@@ -1,10 +1,7 @@
-import { DatePipe, NgIf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, inject, ViewChild } from '@angular/core';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatSort, MatSortModule, SortDirection } from '@angular/material/sort';
-import { MatTableModule } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort, SortDirection } from '@angular/material/sort';
 import { merge, Observable, of } from 'rxjs';
 import { catchError, map, startWith, switchMap } from 'rxjs/operators';
 
@@ -95,9 +92,27 @@ export class ExampleHttpDatabase {
                 number: '2',
                 state: 'closed',
                 title: 'Sample Issue 2'
+            },
+            {
+                created_at: new Date(Date.now() - 86400000).toISOString(), // 1 day ago
+                number: '3',
+                state: 'open',
+                title: 'Feature request: Add dark mode'
+            },
+            {
+                created_at: new Date(Date.now() - 172800000).toISOString(), // 2 days ago
+                number: '4',
+                state: 'closed',
+                title: 'Bug fix: Table sorting doesn\'t work correctly'
+            },
+            {
+                created_at: new Date(Date.now() - 259200000).toISOString(), // 3 days ago
+                number: '5',
+                state: 'open',
+                title: 'Documentation update needed for APIs'
             }
             ],
-            total_count: 2
+            total_count: 5
         };
         
         // For production, use this line instead:

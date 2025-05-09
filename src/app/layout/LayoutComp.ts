@@ -36,6 +36,12 @@ export class LayoutComp {
       color: '#ff7f0e',
     },
     {
+      title: 'Login',
+      icon: 'login',
+      link: '/login',
+      color: '#ff7f0e',
+    },
+    {
       title: 'Function',
       icon: 'bar_chart',
       color: '#ff7f0e',

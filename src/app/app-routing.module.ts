@@ -6,6 +6,9 @@ import { LayoutComp } from './layout/LayoutComp';
 import { MealEntryComp } from './meal-entry/MealEntryComp';
 import { PurchaseEntryComp } from './purchase-entry/PurchaseEntryComp';
 import { PurchaseListComp } from './purchase-list/PurchaseListComp';
+import { LoginComp } from './login/LoginComp';
+import { OTPComp } from './OTP/OTPComp';
+import { MemberRegistrationComp } from './member-registration/MemberRegistrationComp';
 
 
 const routes: Routes = [ 
@@ -37,6 +40,18 @@ const routes: Routes = [
       {
         path: 'purchase-list',
         component: PurchaseListComp
+      },
+      {
+        path: 'login',
+        component: LoginComp
+      },
+      {
+        path: 'otp',
+        component: OTPComp
+      },
+      {
+        path: 'registration',
+        component: MemberRegistrationComp
       }
     ]
   }

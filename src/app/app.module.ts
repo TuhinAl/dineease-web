@@ -28,6 +28,7 @@ import { ToastrModule, ToastrService } from "ngx-toastr";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeInterceptor } from "./auth-service/employee.interceptor";
+import { EmployeeApiService } from './common/service/EmployeeApiService';
 import { FormService } from "./common/service/form-service";
 import { DashboardCompService } from "./dashboard/DashboardCompService";
 import { HomeComp } from './HomeComp';
@@ -35,11 +36,18 @@ import { HeaderComp } from './layout/HeaderComp';
 import { LayoutComp } from './layout/LayoutComp';
 import { MenuItemComp } from './layout/menu-item/MenuItemComp';
 import { PageHeaderComp } from './layout/PageHeaderComp';
+import { LoginComp } from './login/LoginComp';
+import { LoginCompService } from './login/LoginCompService';
 import { MealEntryModule } from './meal-entry/meal-entry.module';
-import { SalesComp } from './SalesComp';
-import { MemberListComp } from './user-list/MemberListComp';
+import { OTPComp } from './OTP/OTPComp';
+import { OTPCompService } from './OTP/OTPCompService';
 import { PurchaseEntryCompModule } from './purchase-entry/PurchaseEntryCompModule';
 import { PurchaseListCompModule } from './purchase-list/PurchaseListCompModule';
+import { SalesComp } from './SalesComp';
+import { MemberListComp } from './user-list/MemberListComp';
+import { MemberRegistrationCompService } from './member-registration/MemberRegistrationCompService';
+import { MemberRegistrationModule } from './member-registration/member-registration.module';
+import { MemberRegistrationComp } from './member-registration/MemberRegistrationComp';
 
 @NgModule({
   declarations: [
@@ -50,7 +58,9 @@ import { PurchaseListCompModule } from './purchase-list/PurchaseListCompModule';
     PageHeaderComp,
     HomeComp,
     SalesComp,
-    MemberListComp
+    MemberListComp,
+    LoginComp,
+    OTPComp
   ],
   imports: [
     ToastrModule.forRoot({
@@ -88,7 +98,8 @@ import { PurchaseListCompModule } from './purchase-list/PurchaseListCompModule';
     DatePipe,
     MealEntryModule,
     PurchaseEntryCompModule,
-    PurchaseListCompModule
+    PurchaseListCompModule,
+    MemberRegistrationModule
   ],
   providers: [
     {
@@ -100,7 +111,10 @@ import { PurchaseListCompModule } from './purchase-list/PurchaseListCompModule';
     ToastrService,
     FormService,
     RxFormBuilder,
-    DashboardCompService
+    DashboardCompService,
+    LoginCompService,
+    EmployeeApiService,
+    OTPCompService,
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

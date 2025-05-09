@@ -45,6 +45,12 @@ export class LayoutComp {
           icon: 'money',
           link: '/meal-entry',
           color: '#ff7f0e',
+        },
+        {
+          title: 'P. Entry',
+          icon: 'money',
+          link: '/purchase-entry',
+          color: '#ff7f0e',
         }
       ],
     },

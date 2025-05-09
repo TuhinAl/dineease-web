@@ -38,6 +38,8 @@ import { PageHeaderComp } from './layout/PageHeaderComp';
 import { MealEntryModule } from './meal-entry/meal-entry.module';
 import { SalesComp } from './SalesComp';
 import { MemberListComp } from './user-list/MemberListComp';
+import { PurchaseEntryCompModule } from './purchase-entry/PurchaseEntryCompModule';
+import { PurchaseListCompModule } from './purchase-list/PurchaseListCompModule';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,9 @@ import { MemberListComp } from './user-list/MemberListComp';
     MatPaginatorModule,
     NgIf,
     DatePipe,
-    MealEntryModule
+    MealEntryModule,
+    PurchaseEntryCompModule,
+    PurchaseListCompModule
   ],
   providers: [
     {

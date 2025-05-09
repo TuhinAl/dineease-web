@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {EmployeeLoginComp} from "./login/EmployeeLoginComp";
-import {DashboardComp} from "./dashboard/DashboardComp";
-import { LayoutComp } from './layout/LayoutComp';
 import { HomeComp } from './HomeComp';
 import { SalesComp } from './SalesComp';
+import { LayoutComp } from './layout/LayoutComp';
 import { MealEntryComp } from './meal-entry/MealEntryComp';
+import { PurchaseEntryComp } from './purchase-entry/PurchaseEntryComp';
+import { PurchaseListComp } from './purchase-list/PurchaseListComp';
 
 
 const routes: Routes = [ 
@@ -29,6 +29,14 @@ const routes: Routes = [
       {
         path: 'meal-entry',
         component: MealEntryComp
+      },
+      {
+        path: 'purchase-entry',
+        component: PurchaseEntryComp
+      },
+      {
+        path: 'purchase-list',
+        component: PurchaseListComp
       }
     ]
   }

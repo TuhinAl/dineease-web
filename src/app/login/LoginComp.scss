@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: #1abc9c;
+  overflow: hidden;
+}
+::selection{
+  background: rgba(26,188,156,0.3);
+}
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  height: 90px;
+  background: #16a085;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #16a085;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: #16a085;
+  border: 1px solid #16a085;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #16a085;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button button{
+  color: #fff;
+  font-size: 20px;
+  width: 350px;
+  height: 50px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #16a085;
+  border: 1px solid #16a085;
+  cursor: pointer;
+}
+form .button button:hover{
+  background: #12876f;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #16a085;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+// Phone input specific styles
+.phone-input-container {
+  margin-bottom: 25px;
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .phone-field {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid lightgrey;
+    
+    &:focus-within {
+      border-color: #16a085;
+      box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+    }
+    
+    .country-code {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 15px;
+      background-color: #f1f1f1;
+      color: #333;
+      font-weight: 500;
+      border-right: 1px solid lightgrey;
+      min-width: 60px;
+      user-select: none;
+    }
+    
+    input {
+      flex: 1;
+      height: 100%;
+      border: none;
+      outline: none;
+      padding: 0 15px;
+      font-size: 16px;
+      
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+      
+      &::placeholder {
+        color: #999;
+      }
+    }
+  }
+}
+
+// Adjust button for phone verification
+.wrapper form .button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  
+  button {
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+}

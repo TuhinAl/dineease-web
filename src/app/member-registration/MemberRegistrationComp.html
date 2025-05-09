@@ -1,0 +1,30 @@
+<div class="registration-container">
+    <div class="registration-card mat-elevation-z8">
+        <!-- <div class="registration-header">
+            <h2 class="title">Member Registration</h2>
+            <p class="subtitle">Please enter your details to register</p>
+        </div> -->
+
+        <form class="registration-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <div class="form-fields">
+                <!-- Name Field -->
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>nickname only- </mat-label>
+                    <input matInput formControlName="name" placeholder="Enter your name">
+                    <mat-icon matPrefix style="width: auto; margin-right: 5px;">Name</mat-icon>
+                    <mat-error *ngIf="registrationForm.get('name')?.hasError('required')">
+                        Not more than 12 characters
+                    </mat-error>
+                </mat-form-field>
+
+                <!-- Dynamic form fields will be added here in the future -->
+            </div>
+
+            <div class="form-actions">
+                <button mat-raised-button color="primary" type="submit" [disabled]="registrationForm.invalid">
+                    Register
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

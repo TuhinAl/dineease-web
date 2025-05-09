@@ -1,0 +1,81 @@
+<div class="meal-entry-container">
+    <mat-card class="meal-entry-card">
+        <div mat-card-header>
+            <div mat-card-title class="fw-bold">Purchase Entry</div>
+        </div>
+
+        <div mat-card-content>
+            <form [formGroup]="mealForm">
+                <div class="form-field">
+                    <mat-label>Meal Date:</mat-label>
+                    <mat-form-field appearance="outline">
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="mealDate">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-field">
+                    <mat-label>Name of the Purchaser:</mat-label>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="text" formControlName="breakfast">
+                    </mat-form-field>
+                </div>
+
+                <div class="item-container">
+                    <div class="form-field">
+                        <mat-label>Item Name:</mat-label>
+                        <mat-form-field appearance="outline">
+                            <input matInput type="text" formControlName="lunch">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-field">
+                        <mat-label>Price:</mat-label>
+                        <mat-form-field appearance="outline">
+                            <input matInput type="number" formControlName="lunch" min="0">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="add-button-container">
+                        <button mat-raised-button color="primary" (click)="addItem()">Add Items</button>
+                    </div>
+
+                    <!-- Remove the comment about making a table since we already have one -->
+
+                    <table mat-table [dataSource]="itemList" class="mat-elevation-z0 w-100 mt-3">
+                        <!-- Item Name Column -->
+                        <ng-container matColumnDef="name">
+                            <th mat-header-cell *matHeaderCellDef>Item Name</th>
+                            <td mat-cell *matCellDef="let item">{{ item.itemName }}</td>
+                        </ng-container>
+
+                        <!-- Price Column -->
+                        <ng-container matColumnDef="price">
+                            <th mat-header-cell *matHeaderCellDef>Price</th>
+                            <td mat-cell *matCellDef="let item">{{ item.price | currency }}</td>
+                        </ng-container>
+
+                        <!-- Action Column -->
+                        <ng-container matColumnDef="action">
+                            <th mat-header-cell *matHeaderCellDef>Action</th>
+                            <td mat-cell *matCellDef="let item; let i = index">
+                                <button mat-icon-button color="warn" (click)="removeItem(i)">
+                                    <mat-icon>delete</mat-icon>
+                                </button>
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="['name', 'price', 'action']"></tr>
+                        <tr mat-row *matRowDef="let row; columns: ['name', 'price', 'action'];"></tr>
+                    </table>
+
+                </div>
+            </form>
+        </div>
+
+        <div mat-card-actions>
+            <button mat-raised-button color="primary" (click)="onSubmit()">Submit Purchase Entry</button>
+        </div>
+    </mat-card>
+</div>
